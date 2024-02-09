@@ -4,11 +4,11 @@
 //   print('Hello ' + nama + ' ' + tes);
 // }
 // C#
-import 'dart:io';
+// import 'dart:io';  
 main(){
-  stdout.writeln("What is your name : ?");
-  var nama = stdin.readLineSync();
-  print('My name is $nama');
+  // stdout.writeln("What is your name : ?");
+  // var nama = stdin.readLineSync();
+  // print('My name is $nama');
 
   /*
   DASAR DASAR 
@@ -174,9 +174,108 @@ main(){
   for (var i in arr){
     print(i);
   }
-
+  for (var i in arr){   #contoh lain
+    print(i);
+  }
+  arr.forEach((n) => print(n));
+  void printNum(num){
+    print("TEs");
+    print(num);
+  }
+  #contoh pake function
+  void main(){
+  var arr = [1, 2, 3];
+  arr.forEach(printNum);  1,2,3
+}
+  void printNum(num){
+  print("TEs");
+  print(num); 
 }
 
+  contoh yang while
+  void main(){
+  int num = 0;
+
+  while(num < 5){
+    print(num);
+    num += 1;
+  }
+  // break and continue
+  for (var i = 0; i<10; i++){
+    if (i>3) break ;
+    print(i);   0,1,2,3
+  }
+  for (var i = 0; i < 10; i++){
+    if (i%2 == 0) continue;
+    print("Ganjil : $i"); 1,3,5,7,9
+  }
+  for (var i = 0; i < 10; i++){
+    if (i%2 != 0) continue;
+    print("Genap : $i");  0,2,4,6,8
+  }
+}
+
+  COLLECTION
+  List
+  void main(){
+    List nama = ['amoi', 'acui', 'ancuk'];  #List hanya salah satu penamaan, pakai var jg bs
+    print(nama.length);
+    for (var i in nama){
+      print(i);
+    }
+  }
+  void main(){
+    List <String> nama =  ['amoi', 'acui', 'abeng'];  //aneh
+    nama[2] = 'astaga';   //mengubah indeks ke i dr list
+    for (var i in nama){
+      print(i);
+    }
+  }
+  void main(){
+    List <String> nama = const ['amoi', 'acui', 'abeng'];  //list tdk bs berubah
+    nama[2] = 'astaga';   //error
+    for (var i in nama){
+      print(i);
+    }
+  }
+  void main(){
+    List <String> nama =  ['amoi', 'acui', 'abeng'];  
+    var nama_1 = nama; // list baru
+    nama[2] = 'astaga'; //list awal diubah
+    for (var i in nama_1){
+      print(i);     //output list 2 jg berubah
+    }
+  }
+  void main(){
+    List <String> nama =  ['amoi', 'acui', 'abeng'];  
+    var nama_1 = [...nama]; // ANEH BANGET
+    nama[2] = 'astaga'; //list nama berubah tetapi nama_1 tidak
+    print(nama);
+    print(nama_1);
+  }
+  Collection
+  1. Set
+  void main(){
+    var arr = {'amoi', 'abeng', 'amoi'};  //amoi ke 2 di highlight (tidak error si) 
+                                    //  karena set tidak boleh ada yg sama
+    print(arr); //output acuman amoi dan abeng
+  }
+  2. Map
+  void main(){
+    var arr = {
+      //Key :  Value
+      'id' : 2525 , //Key jg bisa pake int
+      'nama' : 'amoi',
+      'pw' : 'astaga',
+    };
+    print(arr);
+    print(arr['pw']);
+  }
+  void main(){
+    var arr = Map();  //instant declare atau apapun la namanya
+    arr['tes'] = 'amoi';  //penambahan key dan value
+    print(arr);
+  }
   */
 
 } 
